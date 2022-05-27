@@ -24,8 +24,8 @@ namespace Linq.GridQuery.Test
             Collection = (
                  new[]
                  {
-                        new TestSubject { A = 0 , C = null  , E = null       },
-                        new TestSubject { A = 1 , C = null  , E = null       },
+                        new TestSubject { A = 0 , C = null  , E = null       ,F = 110},
+                        new TestSubject { A = 1 , C = null  , E = null       ,F = new decimal(6.6)},
                         new TestSubject { A = 2 , C = 3     , E = TestEnum.B },
                         new TestSubject { A = 3 , C = 5     , E = TestEnum.C },
                         new TestSubject { A = 4 , C = null  , E = TestEnum.B },

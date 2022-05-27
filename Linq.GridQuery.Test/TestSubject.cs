@@ -19,5 +19,7 @@ namespace Linq.GridQuery.Test
         public int? C { get; set; }
         public TestEnum D { get; set; }
         public TestEnum? E { get; set; }
+
+        public decimal? F { get; set; }
     }
 }

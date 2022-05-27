@@ -692,5 +692,25 @@ namespace Linq.GridQuery.Test
             var expectation = "par => (((par.A > 2) And (par.A < 4)) And (par.A == 5))";
             Assert.That(lambdaExpression.ToString(), Is.EqualTo(expectation));
         }
+
+
+        //[Test]
+        //public void GetLambdaExpressionDecimalTest()
+        //{
+        //    var filter = new FilterTreeNode(
+        //        new GridFilter()
+        //        {
+        //            PropName = "F",
+        //            StringValue = "110",
+        //            Operator = "eq"
+        //        });
+
+        //    var lambdaExpression = filter.GetLambdaExpression<TestSubject>();
+
+        //    var expectation = "par => (par.F.Value == 110)";
+        //    Assert.That(lambdaExpression.ToString(), Is.EqualTo(expectation));
+
+        //}
+
     }
 }

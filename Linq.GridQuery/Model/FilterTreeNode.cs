@@ -205,6 +205,32 @@ namespace Linq.GridQuery.Model
                                                 Expression.Constant(value));
 
             return MakeComparisonWithNullChecksIfNeeded(prop, propAccessExpr, comparisonWhenNotNull);
+
+
+            //if (operatorHandler.SkipNullCheck
+            //  && !isNullableStruct
+            //  )
+            //{
+            //    return operatorHandler.ExpressionFactory(
+            //                        propTypeUnwrapped,
+            //                        prop.PropertyType,
+            //                        propAccessExpr,
+            //                        Expression.Constant(value));
+            //}
+
+            //var comparisonWhenNotNull = operatorHandler.ExpressionFactory(
+            //                                    propTypeUnwrapped,
+            //                                    prop.PropertyType,
+            //                                    propAccessExprWitNullUnwrapIfNeeded,
+            //                                    Expression.Constant(value));
+            //if (operatorHandler.SkipNullCheck)
+            //{
+            //    return comparisonWhenNotNull;
+            //}
+            //else
+            //{
+            //    return MakeComparisonWithNullChecksIfNeeded(prop, propAccessExpr, comparisonWhenNotNull);
+            //}
         }
 
         private static Expression MakeComparisonWithNullChecksIfNeeded(PropertyInfo prop, MemberExpression propAccessExpr, Expression comparisonWhenNotNull)

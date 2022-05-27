@@ -99,9 +99,11 @@ namespace Linq.GridQuery.Model
 
             if (TreatNullLowest && prop.PropertyType.IsNullable() == false)
             {
-                throw new ArgumentException($"{TreatNullLowest} is set to true " + 
+                TreatNullLowest = false;
+           /*     throw new ArgumentException($"{TreatNullLowest} is set to true " + 
                                             $"for a property {name} of type {type.Name} " +
                                             $"which has a type {prop.PropertyType.Name} tha is not nullable.");
+           */
             }
 
             var param = Expression.Parameter(type);

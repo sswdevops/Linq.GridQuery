@@ -156,19 +156,30 @@ namespace Linq.GridQuery.Test
         }
 
         [Test]
-        public void NullLowestOnNoNullableTrhows()
+        public void NullLowestOnNoNullable()
         {
-            Assert.Throws<ArgumentException>(() =>
+          
+            var sort = new[] { new GridSort("A", treatNullLowest: true) };
+
+            var request = new GridRequest()
             {
-                var sort = new[] { new GridSort("A", treatNullLowest: true) };
+                Sort = sort
+            };
 
-                var request = new GridRequest()
-                {
-                    Sort = sort
-                };
+            var query = request.WrapQuery(Collection);
 
-                var query = request.WrapQuery(Collection);
-            });
+
+            var result = query.ToArray();
+
+            var expectation = "Linq.GridQuery.Test.TestSubject[].OrderBy(Param_0 => Param_0.A)";
+
+            Assert.That(query.ToString(), Is.EqualTo(expectation));
+            Assert.That(result, Is.EquivalentTo(new[]
+            {
+                Collection.ElementAt(0),
+                Collection.ElementAt(1),
+                Collection.ElementAt(2)
+            }));
         }
 
         [Test]
