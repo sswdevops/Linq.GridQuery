@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Linq.GridQuery</id>
+    <id>Sx.Linq.GridQuery</id>
     <version>1.0.4</version>
     <title>$title$</title>
-    <authors>github.com/ikoshelev</authors>
+    <authors>github.com/sswdevops</authors>
     <owners>github.com/ikoshelev</owners>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>https://github.com/IKoshelev/Linq.GridQuery</projectUrl>
